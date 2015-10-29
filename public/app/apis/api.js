@@ -3,7 +3,7 @@
 angular.module('prelancer.api', [])
 	.service('API', function($resource){
 
-		var location = 'http://127.0.0.1:3000/api';
+		var location = 'http://prelancer.herokuapp.com/api';
 
 		this.project = $resource(location + '/project/:id/:actionId', {
 			id: '@id', actionId: '@actionId'
