@@ -1,0 +1,92 @@
+.summary-area{
+	margin-top: 65px;
+}
+.summary-list{
+	margin-top: 95px;
+}
+.summary-item{
+	margin: 30px;
+	overflow: hidden;
+}
+.summary-item-left{
+	float: none; /* not needed, just for clarification */
+    background: #FFF;
+    /* the next props are meant to keep this block independent from the other floated one */
+    width: auto;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(85,85,85,0.1);
+}
+.summary-item-right{
+	float: right;
+	width: 300px;
+	
+	
+}
+.summary-item-right-inner{
+	margin-left: 20px;
+	background-color: #E9E9E9;
+	border-radius: 4px;
+	padding: 20px;
+	box-shadow: 0 2px 5px 0 rgba(85,85,85,0.1);
+}
+.summary-item-img{
+	max-width: 100%;
+	box-sizing: border-box;
+}
+.summary-right-header{
+	font-size: 18px;
+	margin-bottom: 10px;
+	color: #363F4D;
+}
+.summary-right-annotation{
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 6px;
+	cursor: pointer;
+	color: #363F4D;
+}
+.summary-right-annotation:hover{
+	color: #FB8A12;
+}
+.summary-item-details{
+	text-align: left;
+	margin-top: 20px;
+}
+.summary-item-title{
+	font-size: 18px;
+	font-weight: 700;
+	color: #363f4d;
+	display: inline-block;
+	margin-right: 20px;
+}
+.summary-item-tags{
+	font-size: 0;
+	display: inline-block;
+	margin-right: 20px;
+}
+.summary-item-tag{
+	display: inline-block;
+	border: 1px solid #CBCBCB;
+	color: #CBCBCB;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 4px 6px;
+	border-radius: 3px;
+	margin-right: 5px;
+}
+.summary-item-source{
+	font-size: 16px;
+	font-weight: 300;
+	display: inline-block;
+}
+.summary-item-source-icon{
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 2px;
+}
+.summary-item-source-text{
+	vertical-align: middle;
+}

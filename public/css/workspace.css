@@ -1,0 +1,299 @@
+/*top bar*/
+.top-bar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 65px;
+	background-color: #FFF;
+	border-bottom: 1px solid #E9E9E9;
+	line-height: 65px;
+	z-index: 5;
+	padding-left: 30px;
+}
+.top-logo{
+	height: 35px;
+	margin-top: 10px;
+}
+/*search*/
+.top-search{
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+	margin-left: 35px;
+}
+.top-search-icon{
+	font-size: 20px;
+	/*vertical-align: -2px;*/
+}
+.top-search-input{
+	border: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	vertical-align: -1px;
+	width: 70px;
+}
+.top-search-input:active{
+	outline: 0;
+}
+.top-search-input:focus{
+	outline: 0;
+	width: 150px;
+}
+/*tags*/
+.top-tags{
+	display: inline-block;
+	height: 100%;
+	vertical-align: top;
+	margin-left: 35px;
+	font-size: 0;
+}
+.top-tag{
+	display: inline;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 5px 10px;
+    border: 1px solid #CBCBCB;
+    border-radius: 4px;
+    color: #CBCBCB;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.top-tag:hover{
+	border: 1px solid #5CC5EE;
+	color: #5CC5EE;
+}
+.top-tag-selected{
+	border: 1px solid #5CC5EE;
+	color: #5CC5EE;
+}
+
+/*submit button*/
+.top-submit{
+	display: inline-block;
+    vertical-align: top;
+    float: right;
+    margin-right: 15px;
+}
+.top-submit-button{
+	color: #FFF;
+	padding: 5px 10px;
+	font-size: 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #F77D0E;
+	background: linear-gradient(to bottom, #fc8c14 0, #f77d0e 100%);
+	border: 1px solid #F77D0E;
+	display: inline;
+	font-weight: 300;
+
+}
+.top-submit-button-summary{
+	background: none;
+	color: #CBCBCB;
+	border-color: #CBCBCB;
+	margin-right: 10px;
+}
+.top-submit-button-summary:hover{
+	background-color: #F8F8F8;
+}	
+
+/*side bar*/
+.project-sidebar{
+	position: fixed;
+	top: 65px;
+	right: 0;
+	width: 165;
+	bottom: 0;
+	background-color: #E9E9E9;
+	border-left: 1px solid #E9E9E9;
+}
+.sidebar-items{
+	width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: scroll;box;
+}
+.sidebar-item{
+	width: 100%;
+	margin-bottom: 15px;
+	border-radius: 3px;
+	background-color: #FFF;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.sidebar-item-img{
+	width: 100%;
+	border-radius: 3px;
+}
+.sidebar-item-detail{
+	padding: 10px;
+	font-size: 12px;
+}
+.sidebar-item-detail-icon{
+
+}
+
+/*results area*/
+.results-area{
+	margin-top: 65px;
+	margin-right: 165px;
+	padding: 30px;
+}
+
+/*deckgrid*/
+.deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '4 .column.column-1-4';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
+}
+
+.deckgrid .column {
+    float: left;
+}
+
+.deckgrid .column-1-4 {
+    width: 25%;
+}
+.card{
+	margin: 10px;
+	display: inline-block;
+	background-color: #FFF;
+	box-shadow: 0 2px 5px 0 rgba(85,85,85,0.1);
+	border-radius: 2px;
+}
+.card-img-container{
+	position: relative;
+}
+.card-img{
+	width: 100%;
+	border-radius: 2px 2px 0 0;
+}
+.card-img-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.card-overlay-table{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.card-overlay-cell{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(0,0,0,0);
+	color: rgba(255,255,255,0);
+	font-size: 80px;
+	cursor: pointer;
+}
+.card-overlay-cell:hover{
+	background-color: rgba(0,0,0,0.3);
+	color: rgba(255,255,255,0.6);
+}
+.card-details{
+	padding: 20px;
+}
+.card-title{
+	font-size: 15px;
+	font-weight: 700;
+	color: #363f4d;
+	margin-bottom: 10px;
+}
+.card-tags{
+	font-size: 0;
+}
+.card-tag{
+	display: inline-block;
+	border: 1px solid #CBCBCB;
+	font-size: 10px;
+	font-weight: 300;
+	padding: 4px 6px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+.card-source{
+	font-size: 12px;
+	font-weight: 300;
+}
+.card-source-icon{
+	height: 15px;
+	vertical-align: middle;
+	margin-right: 2px;
+}
+.card-source-text{
+	vertical-align: middle;
+}
+.load-more-container{
+	text-align: center;
+	margin-right: 165px;
+	margin-bottom: 50px;
+}
+.load-more{
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 15px;
+	font-weight: 300;
+	color: #808080;
+	border-radius: 7px;
+	border: 1px solid #808080;
+	cursor: pointer;
+}
+
+
+/*submit modal*/
+.submit-modal{
+	text-align: center;
+	padding-top: 100px;
+}
+.submit-inner{
+	display: inline-block;
+	background-color: #FFF;
+	border-radius: 10px;
+	width: 500px;
+	padding: 30px;
+	color: #2B3340;
+	text-align: left;
+}
+.submit-header{
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.submit-question{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.submit-answer-input{
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	width: 500px;
+	padding: 5px;
+	border: 1px solid #CBCBCB;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+.submit-button{
+	color: #FFF;
+	padding: 5px 10px;
+	font-size: 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #F77D0E;
+	background: linear-gradient(to bottom, #fc8c14 0, #f77d0e 100%);
+	border: 1px solid #F77D0E;
+	display: inline;
+	font-weight: 300;
+	margin-right: 10px;
+}
+.submit-button-cancel{
+	color: #808080;
+	border-color: #808080;
+	background: none;
+	background-color: #FFF;
+}

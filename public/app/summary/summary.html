@@ -1,0 +1,41 @@
+<div class="top-bar">
+	<img src="img/prelancer.png" class="top-logo" ng-click="testModal()"/>
+</div>
+<div class="summary-area">
+	<div class="summary-list">
+		<div class="summary-item" ng-repeat="item in state.project.items">
+			<div class="summary-item-right">
+				<div class="summary-item-right-inner">
+					<div class="summary-right-header">
+						Design notes
+					</div>
+					<div class="summary-right-annotation" ng-repeat="annotation in item.annotations">
+						{{annotation.text}}
+					</div>
+				</div>
+			</div>
+			<div class="summary-item-left">
+				<div class="summary-item-img-container">
+					<img ng-src="{{item.url}}" class="summary-item-img" annotator="item" read-only="true"/>
+				</div>
+				<div class="summary-item-details">
+					<span class="summary-item-title">
+						{{item.title}}
+					</span>
+					<span class="summary-item-tags">
+						<!--<span class="summary-item-tag">Logo</span>-->
+						<span class="summary-item-tag">Web</span>
+					</span>
+					<div class="summary-item-source">
+						<img ng-show="item.source == 'freelancer'" src="/img/freelancer_icon.png" class="summary-item-source-icon"/>
+						<span ng-show="item.source == 'freelancer'" class="summary-item-source-text">Freelancer Showcase</span>
+						<img ng-show="item.source == 'dribbble'" src="/img/dribbble-icon.png" class="summary-item-source-icon"/>
+						<span class="summary-item-source-text" ng-show="item.source == 'dribbble'">Dribbble</span>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</div>

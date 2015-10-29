@@ -1,0 +1,29 @@
+<div class="submit-modal" ng-controller="SubmitCtrl">
+	<div class="submit-inner">
+		<div class="submit-header">
+			Submit this project to Freelancer.com
+		</div>
+		<div class="submit-question">
+			Give your project a name
+		</div>
+		<input class="submit-answer-input" ng-model="job.title" placeholder="Design a logo for Pete's ice-cream van"></input>
+
+		<div class="submit-question">
+			What other details do we need to know?
+		</div>
+		<textarea class="submit-answer-input" ng-model="job.description" placeholder="Pete has red hair. The van is green."></textarea>
+
+		<div class="submit-question">
+			What is your budget?
+		</div>
+		<input class="submit-answer-input" ng-model="job.budget" placeholder="$300"></input>
+		<div>
+			<div class="submit-button" ng-click="submitJob($event)">
+				Submit this project
+			</div>
+			<div class="submit-button submit-button-cancel" ng-click="close($event)">
+				Cancel
+			</div>
+		</div>
+	</div>
+</div>

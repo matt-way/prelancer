@@ -1,0 +1,30 @@
+{
+  "name": "freelancer-insp",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/matt-way/freelancer-insp",
+  "authors": [
+    "Matt Way <matt__way@hotmail.com>"
+  ],
+  "description": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.7",
+    "ngstorage": "~0.3.9",
+    "angular-deckgrid": "~0.5.0",
+    "lodash": "~3.10.1",
+    "ng-infinite-scroll": "~0.0.1",
+    "ngInfiniteScroll": "~1.2.1"
+  }
+}

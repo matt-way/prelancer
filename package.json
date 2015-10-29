@@ -1,0 +1,31 @@
+{
+  "name": "freelancer-inspiration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-way/freelancer-insp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matt-way/freelancer-insp/issues"
+  },
+  "homepage": "https://github.com/matt-way/freelancer-insp#readme",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "body-parser": "^1.14.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "hat": "0.0.3",
+    "less-middleware": "^2.0.1",
+    "lodash": "^3.10.1",
+    "mongoose": "^4.2.2",
+    "node-rest-client": "^1.5.1",
+    "node-twitterbot": "^0.2.2"
+  }
+}

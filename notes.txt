@@ -1,0 +1,154 @@
+notes for hackathon design:
+
+- front page is either
+	- no projects yet
+		- simple informative display with create new project (maybe enter a name)
+	- already has projects
+		- list the projects for editing/create new
+- next page is the work page
+	- primarily a list of images that can be drilled down by category or search
+		- taken from the previous projects for now
+- actions
+	- projects use localstorage for now (demo), so everything is auto saved as you go (also easy to code)
+	- drill down/scroll images
+	- click on images to zoom
+		- has a box to annotate
+		- has the ability to mark the image (could just be a box for proof of concept)
+		- save the image to your project
+	- ability to edit/delete an existing image
+		- i.e. some way of showing the images currently in the set
+- we could have an edit project window that has name/type/description
+- when complete you click the create freelancer project button
+	- this opens the name/type/description section and possibly shows a summary of it all, with inspiration etc
+	- this will have to be linked on the actual project description in the create api call
+- after clicking create, you are taken to the actual freelancer create page
+	- you only need to sign in on create
+
+code notes:
+	- api consumer ($resource, simple)
+	- $localstorage to store data
+	- project service
+	- image service, with annotation information
+	- module for drawing and loading annotation details on an image (check github)
+	- service for grabbing image sets from api with drill down (possibly search too)
+	- module for creating freelancer project
+		- with login stuff
+	- service for managing a set of projects
+
+notes:
+	- how do we handle logins, or new users?
+	- maybe just facebook for now to easily get started
+
+
+
+- future features:
+	- being able to order the images, or more in depth editing, etc
+	- split the images via machine learning (overkill?)
+		- could do a basic thing for now that lets you specify colours and things
+
+
+
+- finish boilerplate
+- hook up to mongo and get express working
+- create base mongo objects, and hook them up to a crud api (don't worry about security just yet)
+
+- so how do we do serialisation?
+	- api reads/writes the entire object
+	- so on load of the app, checks if a token exists, and if so, loads the project if found
+		- then when a pic is added/removed/updated, the api is called again, pushing everything
+	- so the only localstorage thing we need is the token for now
+
+- so setup basic page, and the token system
+- setup interfaces to the save/load 
+
+- then start the freelancer api module (have it return dummy data to start)
+	- or could setup the dribbble api first so we have images
+- could setup routesx
+- then build the basic panels of the main screen
+
+
+- on load there is a loading home screen
+	- it checks if there is an id in localstorage
+	- if there isn't one it requests a creation of a project returning the id
+		- put in local strorage
+	- if there is one, it request the project data
+
+
+- so home loading
+	- loads until base data has loaded
+- then goes to workspace
+	- has default search terms, etc (these are also saved)
+- /id will be the final product view
+- what about creating a job?
+	- lets just do that from the workspace page for now
+	- click the button
+	- could be a popup modal like the freelancer create page
+	- what about a full screen modal?
+		- yeah, no route
+		- that way it can be styled however we want
+		- can figure that out later
+	- you answer the questions and click post
+	- this then takes you to your actual freelancer project page (opens in a new tab)
+		- so if we did it as a modal, then we could say success, with a link to the actual freelancer project page
+
+- so you can either start from the primary domain, or you can start from a direct url
+	- what we want, is that if / is chosen, 
+
+- ok, so the potential unknowns
+	- we should be able to get the freelancer api working
+	- the annotation and dribble/behance api might be harder
+	- annotation is just time. it is doable
+
+- extra api options
+	- a prelancer twitter bot that tweets to users who have attached their twitter id to a creators account somewhere
+		- just need to check how common twitter is
+- it would be nice if we could direct message them through a community though
+- the point is that each system/community will probably need its own solution to messaging the users
+	- social media might be the best way anyway, or email if it can be obtained
+
+- solve annotation nuances
+- solve modal
+- 
+
+
+- todo:
+	- add a modal to fill out project information
+	- finish the post job endpint, which takes in all the project creation form information and posts a project
+	- go through the project creators, and either do the freelancer hire me request, or use the twitter bot
+
+- presentation
+	- prelancer title page
+	- when we start thinking about a project we dont do this
+		- show the freelancer project description ux
+	- we do this
+		- show collage of inspiration
+		- talk about that process
+			- how we end up doing screen shots, using drop box and slack, etc
+	- explain product
+		- screenshots should do, but an animation would be cool
+		- talk about searching/annotation
+		- talk about summary, and the ability to share your inspiration collection
+			- in the future you could incorporate collaboration
+	- talk about post job button
+	- benefits of the collection tool
+	- so at the moment you might be thinking, ok, this is kind of cool, and may reduce project creation bounce rates if this sort of thing was baked into the project creation page, but as a standalone tool, it could serve as a driver for new project creators not already part of the freelancer ecosystem
+	- so then we thought, how can we use a tool like this to drive massive amounts of people to freelancer
+	- so we decided to modularise the tool, and allow the user to search not only through freelancer work, but work from any other design community.
+	- show a slide of all the different communities and their sizes
+	- now what do we get with ll this information
+		- these are not just images now, they have a much more valuable context
+		- with each image, we have the platform that it was listed on, as well as the user who created it.
+		- now with practically all of these communities the profiles allow users to list social media details, most prominently with design sites seemed to be twitter.
+	- so when a job is posted, we are able to look through all the inspirational content and the users that created it
+		- if a freelancer user is behind the work, then we straight away employ the invite to a project process, as these users are immediately best candidates to do the work, due to similarity.
+	- but here is where the magic is.
+		- we built a twitter bot to notify the creators of the non freelancer influenced work about the project
+		- show a sample tweet
+	- while some of these communitieis will definitely have user overlap, this still opens up freelancer to massively larger market.
+		- just imagine getting a tweet that say somebody loves what you did, and want something similar, or something that incorporates some aspect of your design
+		- as a freelancer yourself, 
+
+
+todo
+	- copy repo over and get live version working
+

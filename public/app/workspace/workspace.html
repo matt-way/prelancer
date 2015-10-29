@@ -1,0 +1,79 @@
+<div class="top-bar">
+	<img src="img/prelancer.png" class="top-logo"/>
+	<div class="top-search">
+		<span class="icon-search top-search-icon"></span>
+		<input class="top-search-input" placeholder="Search"></input>
+	</div>
+	<div class="top-tags">
+		<div ng-repeat="tag in tags" class="top-tag" ng-class="{'top-tag-selected': selectedTag.label === tag.label}" ng-click="selectTag(tag)">{{tag.label}}</div>
+	</div>
+	<div class="top-submit">
+		<!-- <div class="top-submit-button top-submit-button-summary" ng-click="submit()">
+			Project Summary
+		</div> -->
+		<div class="top-submit-button" ng-click="submit()">
+			Submit This Project
+		</div>
+	</div>
+</div>
+
+<div class="project-sidebar">
+	<div class="sidebar-items">
+		<div class="sidebar-item" ng-repeat="item in pState.project.items">
+			<img class="sidebar-item-img" ng-src="{{item.thumbnail}}" ng-click="editImage(item)"/>
+			<div class="sidebar-item-detail">
+				<span class="icon-edit sidebar-item-detail-icon"></span>{{item.annotations.length || 0}} annotations
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="results-area">
+	<div class="item-list group">
+		<div deckgrid source="items" class="deckgrid">
+			<div class="card">
+				<div class="card-img-container">
+					<img class="card-img" ng-src="{{card.thumbnail}}"/>
+					<div class="card-img-overlay">
+						<div class="card-overlay-table">
+							<div class="card-overlay-cell">
+								<span class="icon-plus-circled card-overlay-icon" ng-click="mother.addImage(card)"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-details">
+					<div class="card-title">
+						{{card.title}}
+					</div>
+					<!--<div class="card-tags">
+						<div class="card-tag">Logo</div>
+						<div class="card-tag">Web</div>
+					</div>-->
+					<div class="card-source">
+						<img ng-show="card.source == 'freelancer'" src="/img/freelancer_icon.png" class="card-source-icon"/>
+						<span class="card-source-text" ng-show="card.source == 'freelancer'">Freelancer Showcase</span>
+
+						<img src="/img/dribbble-icon.png" class="card-source-icon" ng-show="card.source == 'dribbble'"/>
+						<span class="card-source-text" ng-show="card.source == 'dribbble'">Dribbble</span>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div ng-repeat="item in items"> -->
+			<!-- <img ng-src="{{items[0].url}}" annotator="items[0]"/> -->
+		<!-- </div> -->
+			<!-- <img ng-src="{{items[1].url}}" ng-click="testModal()"/> -->
+	</div>
+	
+</div>
+<div class="load-more-container">
+	<div class="load-more" ng-click="loadMore()">Load More</div>
+</div>
+
+
+
+<div custom-modal=""></div>

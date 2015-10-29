@@ -1,0 +1,18 @@
+@import url("workspace.css");
+@import url("modal.css");
+@import url("detail.css");
+@import url("summary.css");
+
+@import url("fontello.css");
+
+body{
+	background-color: #F9F9F9;
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+}
+
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}

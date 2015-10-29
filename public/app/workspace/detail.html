@@ -1,0 +1,11 @@
+<div ng-controller="DetailCtrl" class="detail-wrapper">
+	<div class="detail-controls">
+		<div class="detail-text-container">
+			<div class="detail-text">What do you like about this work?</div>
+			<div class="detail-text">Click and drag to annotate</div>
+		</div>
+		<div class="detail-button detail-button-remove" ng-click="goodClose($event)">Cancel</div>
+		<div class="detail-button detail-button-save" ng-click="save($event)">Save</div>
+	</div>
+	<img class="detail-img" ng-src="{{item.url}}" annotator="item"/>
+</div>
