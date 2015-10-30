@@ -140,6 +140,16 @@
 	margin-right: 165px;
 	padding: 30px;
 }
+.results-title{
+	font-size: 50px;
+	color: #2b3340;
+	text-align: center;
+	padding: 50px;
+}
+.results-title-small{
+	margin-top: 20px;
+	font-size: 25px;
+}
 
 /*deckgrid*/
 .deckgrid[deckgrid]::before {
